@@ -1,0 +1,117 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "parsePsAuxOutput",
+		"order": 3,
+		"pvardefs": [
+			{
+				"name": "pOutput",
+				"order": 1,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "colNum",
+				"order": 6,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "headersList",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lineRef",
+				"order": 7,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "resultList",
+				"order": 4,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "tempList",
+				"order": 5,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$getProcessesList",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pErrorText",
+				"order": 3,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "availablePages",
+				"order": 4,
+				"type": "kInteger",
+				"subtype": "k64bitint",
+				"sublen": 0
+			},
+			{
+				"name": "proc",
+				"order": 1,
+				"type": "kObject",
+				"subtype": ".OProcess.OProcess Worker\\OProcess",
+				"sublen": 0
+			},
+			{
+				"name": "returnList",
+				"order": 5,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "stream",
+				"order": 2,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

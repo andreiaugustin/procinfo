@@ -1,0 +1,26 @@
+
+Calculate tempList as split(pOutput.1.stdout,' ')
+Do pOutput.$remove(1)
+
+For tempList.$line from 1 to tempList.$linecount step 1
+	If len(tempList.value)
+		Do resultList.$cols.$add(tempList.value,kCharacter,kSimplechar)
+	End If
+End For
+
+For pOutput.$line from 1 to pOutput.$linecount step 1
+	Calculate colNum as 0
+	Do tempList.$clear()
+	Calculate tempList as split(pOutput.stdout,' ')
+	
+	Do resultList.$add() Returns lineRef
+	
+	For tempList.$line from 1 to tempList.$linecount step 1
+		If len(tempList.value)
+			Calculate colNum as colNum+1
+			Calculate lineRef.[colNum] as tempList.value
+		End If
+	End For
+End For
+
+Quit method resultList

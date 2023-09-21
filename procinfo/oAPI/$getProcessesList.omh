@@ -1,0 +1,18 @@
+Switch sys(6)
+	Case 'N' ## Windows
+		
+	Case 'U' ## Linux
+		
+	Case 'X' ## macOS
+		Do proc.$init('/bin/ps',row('aux'))
+		Do proc.$run()
+		If proc.$exitcode
+			Do proc.$readlines(kOProcessStderr) Returns stream
+			Calculate pErrorText as stream.1.stderr
+			Quit method
+		Else
+			Do proc.$readlines(kOProcessStdout) Returns stream
+			Do method parsePsAuxOutput (stream) Returns returnList
+			Quit method returnList
+		End If
+End Switch
